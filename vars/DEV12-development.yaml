@@ -1,0 +1,6 @@
+variables:
+  azureSubscription: 'AZD-RWD-DEV12'     # Example 'AZD-RWD-DEV10'-- Remove this comment
+  docker.imageName: ''      # Example 'epranyimagename'-- Remove this comment
+  acr.azureContainerRegistryName: 'devrwdinfac1401'
+  acr.repositoryName: ''    # Example 'epranyimagenamerepository'-- Remove this comment
+  serviceName: ''           # Example 'DEVRWDWEBFA4410'-- Remove this comment
