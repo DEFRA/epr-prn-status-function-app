@@ -5,10 +5,24 @@ pool: DEFRA-COMMON-ubuntu2004-SSV3
 parameters:
 - name: teamName
   displayName: 'Select Environment Name:    (works only with "development" as target env)'
-  default: 'DEV12' # Example 'DEV10'-- Remove this comment
+  default: 'DEV12'
   type: string
   values:
-    - DEV12  # Example 'DEV10' you can add more Dev Environment if applicable -- Remove this comment
+    - DEV1
+    - DEV2
+    - DEV3
+    - DEV4
+    - DEV5
+    - DEV6
+    - DEV7
+    - DEV8
+    - DEV9
+    - DEV10
+    - DEV11
+    - DEV12
+    - DEV13
+    - DEV14
+    - DEV15
 - name: envToDeploy
   displayName: 'Target Environment to deploy:    (select "development" for DEV 1-11)'
   default: development
@@ -62,7 +76,7 @@ extends:
   template: epr-funcs-deployment-pipeline.yaml@CommonTemplates
   parameters:
     ${{ if contains(parameters.imageTag, 'RELEASE') }}:
-      imageTag: $( ) #TBC Add App name in
+      imageTag: $( DEVRWDWEBFAx413 )
     ${{ else }}:
       imageTag: ${{ parameters.imageTag }}
     azureSubscription: $(azureSubscription)
